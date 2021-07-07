@@ -21,8 +21,8 @@
 - (NSString *) getResult
 {
     if([self total] == 0) return 0;
-    float correctRate = self.rightCount / [self total] * 100;
-    return [[NSString alloc] initWithFormat:@"Score: %d right, %d wrong ---- %d%%", self.rightCount, self.wrongCount, correctRate];
+    float correctRate = ((float) self.rightCount / [self total] * 100);
+    return [[NSString alloc] initWithFormat:@"Score: %d right, %d wrong ---- %f%%", self.rightCount, self.wrongCount, correctRate];
 }
 
 - (int) total
