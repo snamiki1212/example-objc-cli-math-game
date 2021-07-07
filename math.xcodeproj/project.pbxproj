@@ -10,6 +10,7 @@
 		24353ED226964D5E008C9880 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24353ED126964D5E008C9880 /* main.m */; };
 		24353EDA269651FA008C9880 /* AdditionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 24353ED9269651FA008C9880 /* AdditionQuestion.m */; };
 		24353EDE269657DC008C9880 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 24353EDD269657DC008C9880 /* InputHandler.m */; };
+		24353EE226965A76008C9880 /* ScoreKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = 24353EE126965A76008C9880 /* ScoreKeeper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		24353ED9269651FA008C9880 /* AdditionQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdditionQuestion.m; sourceTree = "<group>"; };
 		24353EDC269657DC008C9880 /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
 		24353EDD269657DC008C9880 /* InputHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
+		24353EE026965A76008C9880 /* ScoreKeeper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoreKeeper.h; sourceTree = "<group>"; };
+		24353EE126965A76008C9880 /* ScoreKeeper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreKeeper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				24353ED126964D5E008C9880 /* main.m */,
+				24353EE326965A7A008C9880 /* ScoreKeeper */,
 				24353EDF269657E3008C9880 /* InputHandler */,
 				24353EDB269657C5008C9880 /* AdditionQuestion */,
 			);
@@ -86,6 +90,15 @@
 				24353EDD269657DC008C9880 /* InputHandler.m */,
 			);
 			path = InputHandler;
+			sourceTree = "<group>";
+		};
+		24353EE326965A7A008C9880 /* ScoreKeeper */ = {
+			isa = PBXGroup;
+			children = (
+				24353EE026965A76008C9880 /* ScoreKeeper.h */,
+				24353EE126965A76008C9880 /* ScoreKeeper.m */,
+			);
+			path = ScoreKeeper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24353EE226965A76008C9880 /* ScoreKeeper.m in Sources */,
 				24353ED226964D5E008C9880 /* main.m in Sources */,
 				24353EDE269657DC008C9880 /* InputHandler.m in Sources */,
 				24353EDA269651FA008C9880 /* AdditionQuestion.m in Sources */,

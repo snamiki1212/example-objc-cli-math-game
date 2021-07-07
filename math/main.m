@@ -8,14 +8,17 @@
 #import <Foundation/Foundation.h>
 #import "AdditionQuestion.h"
 #import "InputHandler.h"
+#import "ScoreKeeper.h"
 
-
+const int NUMBER_OF_QUESTION = 10;
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSLog(@"Math!\n\n");
         
-        while(true){
+        ScoreKeeper *sc = [[ScoreKeeper alloc] init];
+        
+        while([sc total] < NUMBER_OF_QUESTION){
             // create model
             AdditionQuestion *q1 = [[AdditionQuestion alloc] init];
             NSLog(@"%@\n", q1.question);
@@ -31,10 +34,14 @@ int main(int argc, const char * argv[]) {
             BOOL isCorrect = q1.answer == [str intValue];
             if(isCorrect) {
                 NSLog(@"Right\n");
+                sc.rightCount++;
             } else {
                 NSLog(@"Wrong\n");
+                sc.wrongCount++;
             }
         }
+        
+        NSLog(@"%@", [sc getResult]);
     }
     return 0;
 }
