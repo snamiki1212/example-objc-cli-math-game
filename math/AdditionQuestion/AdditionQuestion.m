@@ -18,7 +18,17 @@
         NSInteger elem2 = arc4random_uniform(100);
         self.question = [[NSString alloc] initWithFormat: @"%ld + %ld = ?", (long)elem1, elem2];
         self.answer = elem1 + elem2;
+        self.startTime = [NSDate date];
     }
     return self;
+}
+
+- (NSInteger) answer {
+    self.endTime = [NSDate date];
+    return _answer;
+}
+
+- (NSTimeInterval) answerTime {
+    return [self.startTime timeIntervalSinceDate:self.endTime];
 }
 @end
