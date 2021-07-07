@@ -64,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				24353ED126964D5E008C9880 /* main.m */,
-				24353EDF269657E3008C9880 /* New Group */,
+				24353EDF269657E3008C9880 /* InputHandler */,
 				24353EDB269657C5008C9880 /* AdditionQuestion */,
 			);
 			path = math;
@@ -79,13 +79,13 @@
 			path = AdditionQuestion;
 			sourceTree = "<group>";
 		};
-		24353EDF269657E3008C9880 /* New Group */ = {
+		24353EDF269657E3008C9880 /* InputHandler */ = {
 			isa = PBXGroup;
 			children = (
 				24353EDC269657DC008C9880 /* InputHandler.h */,
 				24353EDD269657DC008C9880 /* InputHandler.m */,
 			);
-			path = "New Group";
+			path = InputHandler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
