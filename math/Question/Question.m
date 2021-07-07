@@ -5,9 +5,9 @@
 //  Created by shunnamiki on 2021/07/07.
 //
 
-#import "AdditionQuestion.h"
+#import "Question.h"
 
-@implementation AdditionQuestion
+@implementation Question
 
 - (instancetype)init
 {

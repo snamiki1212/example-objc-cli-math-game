@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdditionQuestion.h"
+#import "Question.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
@@ -22,11 +22,11 @@ int main(int argc, const char * argv[]) {
         
         while([sc total] < NUMBER_OF_QUESTION){
             // create model
-            AdditionQuestion *q1 = [[AdditionQuestion alloc] init];
-            NSLog(@"%@\n", q1.question);
+            Question *question = [[Question alloc] init];
+            NSLog(@"%@\n", question.question);
             
             // append to list
-            [qm.questions addObject:q1];
+            [qm.questions addObject:question];
             
             // input
             NSString *str = [InputHandler getInputHandler];
@@ -36,7 +36,7 @@ int main(int argc, const char * argv[]) {
             if(shouldQuit) break;
             
             // result
-            BOOL isCorrect = q1.answer == [str intValue];
+            BOOL isCorrect = question.answer == [str intValue];
             if(isCorrect) {
                 NSLog(@"Right\n");
                 sc.rightCount++;
