@@ -6,15 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AdditionQuestion.h"
 
 // MARK: - Input Helpers
 NSString *getInputStr(void) {
     char inputChars[255];
-    printf("Input a string: ");
     fgets(inputChars, 255, stdin);
-//    NSString *inputString = [NSString stringWithUTF8String:inputChars];
     NSString *inputString = [NSString stringWithCString:inputChars encoding:(NSUTF8StringEncoding)];
-
     return inputString;
 }
 
@@ -24,14 +22,21 @@ NSString *parseStr(NSString *str) {
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSLog(@"Math!\n\n");
         
+        // create model
+        AdditionQuestion *q1 = [[AdditionQuestion alloc] init];
+        NSLog(@"%@\n", q1.question);
+        
+        // input
         NSString *str = getInputStr();
         str = parseStr(str);
-        NSLog(@"%@.", str);
-        if([str isEqualToString:@"text"]) {
-            printf("OK\n");
+        
+        // result
+        if(q1.answer == [str intValue]) {
+            NSLog(@"Right\n");
+        } else {
+            NSLog(@"Wrong\n");
         }
     }
     return 0;
