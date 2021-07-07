@@ -24,19 +24,26 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSLog(@"Math!\n\n");
         
-        // create model
-        AdditionQuestion *q1 = [[AdditionQuestion alloc] init];
-        NSLog(@"%@\n", q1.question);
-        
-        // input
-        NSString *str = getInputStr();
-        str = parseStr(str);
-        
-        // result
-        if(q1.answer == [str intValue]) {
-            NSLog(@"Right\n");
-        } else {
-            NSLog(@"Wrong\n");
+        while(true){
+            // create model
+            AdditionQuestion *q1 = [[AdditionQuestion alloc] init];
+            NSLog(@"%@\n", q1.question);
+            
+            // input
+            NSString *str = getInputStr();
+            str = parseStr(str);
+            
+            // commands
+            BOOL shouldQuit = [str isEqualToString:@"quit"];
+            if(shouldQuit) break;
+            
+            // result
+            BOOL isCorrect = q1.answer == [str intValue];
+            if(isCorrect) {
+                NSLog(@"Right\n");
+            } else {
+                NSLog(@"Wrong\n");
+            }
         }
     }
     return 0;
