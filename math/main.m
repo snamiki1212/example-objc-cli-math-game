@@ -7,18 +7,9 @@
 
 #import <Foundation/Foundation.h>
 #import "AdditionQuestion.h"
+#import "InputHandler.h"
 
-// MARK: - Input Helpers
-NSString *getInputStr(void) {
-    char inputChars[255];
-    fgets(inputChars, 255, stdin);
-    NSString *inputString = [NSString stringWithCString:inputChars encoding:(NSUTF8StringEncoding)];
-    return inputString;
-}
 
-NSString *parseStr(NSString *str) {
-    return [str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -30,8 +21,7 @@ int main(int argc, const char * argv[]) {
             NSLog(@"%@\n", q1.question);
             
             // input
-            NSString *str = getInputStr();
-            str = parseStr(str);
+            NSString *str = [InputHandler getInputHandler];
             
             // commands
             BOOL shouldQuit = [str isEqualToString:@"quit"];

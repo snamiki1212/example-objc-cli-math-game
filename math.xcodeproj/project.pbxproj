@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		24353ED226964D5E008C9880 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24353ED126964D5E008C9880 /* main.m */; };
 		24353EDA269651FA008C9880 /* AdditionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 24353ED9269651FA008C9880 /* AdditionQuestion.m */; };
+		24353EDE269657DC008C9880 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 24353EDD269657DC008C9880 /* InputHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		24353ED126964D5E008C9880 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24353ED8269651FA008C9880 /* AdditionQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdditionQuestion.h; sourceTree = "<group>"; };
 		24353ED9269651FA008C9880 /* AdditionQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdditionQuestion.m; sourceTree = "<group>"; };
+		24353EDC269657DC008C9880 /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
+		24353EDD269657DC008C9880 /* InputHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +64,28 @@
 			isa = PBXGroup;
 			children = (
 				24353ED126964D5E008C9880 /* main.m */,
+				24353EDF269657E3008C9880 /* New Group */,
+				24353EDB269657C5008C9880 /* AdditionQuestion */,
+			);
+			path = math;
+			sourceTree = "<group>";
+		};
+		24353EDB269657C5008C9880 /* AdditionQuestion */ = {
+			isa = PBXGroup;
+			children = (
 				24353ED8269651FA008C9880 /* AdditionQuestion.h */,
 				24353ED9269651FA008C9880 /* AdditionQuestion.m */,
 			);
-			path = math;
+			path = AdditionQuestion;
+			sourceTree = "<group>";
+		};
+		24353EDF269657E3008C9880 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				24353EDC269657DC008C9880 /* InputHandler.h */,
+				24353EDD269657DC008C9880 /* InputHandler.m */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24353ED226964D5E008C9880 /* main.m in Sources */,
+				24353EDE269657DC008C9880 /* InputHandler.m in Sources */,
 				24353EDA269651FA008C9880 /* AdditionQuestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
