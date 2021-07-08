@@ -26,7 +26,7 @@
 }
 
 - (NSTimeInterval) timeToAnswer {
-    return [self.startTime timeIntervalSinceDate:self.endTime];
+    return [self.endTime timeIntervalSinceDate:self.startTime];
 }
 
 - (void) generateQuestion {

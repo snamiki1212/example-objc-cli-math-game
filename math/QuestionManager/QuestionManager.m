@@ -6,6 +6,7 @@
 //
 
 #import "QuestionManager.h"
+#import "BaseQuestion.h"
 
 @implementation QuestionManager
 
@@ -20,9 +21,14 @@
 
 - (NSString *) timeOutput {
 
-    // TODO: get total time and averate time from each item in list
-    int totalTime = 10;
-    int averageTime = 20;
+    NSUInteger count = [self.questions count];
+    
+    int totalTime = 0;
+    for(BaseQuestion *question in self.questions) {
+        totalTime += [question timeToAnswer];
+    }
+    
+    int averageTime = count == 0 ? 0 : totalTime / count;
     NSString *msg = [[NSString alloc]initWithFormat:@"total time: %ds, average time: %ds", totalTime, averageTime];
     return msg;
 }
