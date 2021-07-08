@@ -12,7 +12,7 @@
 
 - (Question *) generateRandomQuestion {
     NSArray *classNameList = @[
-//        @"AdditionQuestion",
+        @"AdditionQuestion",
         @"SubtractionQuestion",
 //        @"MultiplicationQuestion",
 //        @"DivisionQuestion",
