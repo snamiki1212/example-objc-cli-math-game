@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSMutableArray *questions;
 - (instancetype)init;
 - (NSString *) timeOutput;
+- (int) getTotaltime;
+- (int) getAverageTime;
 @end
 
 NS_ASSUME_NONNULL_END

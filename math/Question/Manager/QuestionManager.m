@@ -20,16 +20,22 @@
 }
 
 - (NSString *) timeOutput {
+    NSString *msg = [[NSString alloc]initWithFormat:@"total time: %ds, average time: %ds", [self getTotaltime], [self getAverageTime]];
+    return msg;
+}
 
-    NSUInteger count = [self.questions count];
-    
+- (int) getTotaltime
+{
     int totalTime = 0;
     for(BaseQuestion *question in self.questions) {
         totalTime += [question timeToAnswer];
     }
-    
-    int averageTime = count == 0 ? 0 : totalTime / count;
-    NSString *msg = [[NSString alloc]initWithFormat:@"total time: %ds, average time: %ds", totalTime, averageTime];
-    return msg;
+    return totalTime;
+}
+
+- (int) getAverageTime {
+    NSUInteger count = [self.questions count];
+    int averageTime = count == 0 ? 0 : [self getTotaltime] / count;
+    return averageTime;
 }
 @end

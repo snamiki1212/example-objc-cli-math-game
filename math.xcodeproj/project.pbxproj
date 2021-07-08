@@ -86,8 +86,6 @@
 			children = (
 				24353ED126964D5E008C9880 /* main.m */,
 				24353EF42696974D008C9880 /* Question */,
-				24353EEF26969363008C9880 /* QuestionFactory */,
-				24353EE72696699A008C9880 /* QuestionManager */,
 				24353EE326965A7A008C9880 /* ScoreKeeper */,
 				24353EDF269657E3008C9880 /* InputHandler */,
 			);
@@ -121,13 +119,13 @@
 			path = ScoreKeeper;
 			sourceTree = "<group>";
 		};
-		24353EE72696699A008C9880 /* QuestionManager */ = {
+		24353EE72696699A008C9880 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				24353EE426966997008C9880 /* QuestionManager.h */,
 				24353EE526966997008C9880 /* QuestionManager.m */,
 			);
-			path = QuestionManager;
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		24353EEB2696920A008C9880 /* SubtractionQuestion */ = {
@@ -139,13 +137,13 @@
 			path = SubtractionQuestion;
 			sourceTree = "<group>";
 		};
-		24353EEF26969363008C9880 /* QuestionFactory */ = {
+		24353EEF26969363008C9880 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
 				24353EEC2696935D008C9880 /* QuestionFactory.h */,
 				24353EED2696935D008C9880 /* QuestionFactory.m */,
 			);
-			path = QuestionFactory;
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		24353EF3269696A1008C9880 /* AdditionQuestion */ = {
@@ -160,11 +158,9 @@
 		24353EF42696974D008C9880 /* Question */ = {
 			isa = PBXGroup;
 			children = (
-				24353EDB269657C5008C9880 /* BaseQuestion */,
-				24353EEB2696920A008C9880 /* SubtractionQuestion */,
-				24353EF3269696A1008C9880 /* AdditionQuestion */,
-				24353EF82696978C008C9880 /* MultiplicationQuestion */,
-				24353EFC269697CA008C9880 /* DivisionQuestion */,
+				24353EE72696699A008C9880 /* Manager */,
+				24353EEF26969363008C9880 /* Factory */,
+				24353EFD26969C71008C9880 /* Models */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -185,6 +181,18 @@
 				24353EFA269697C6008C9880 /* DivisionQuestion.m */,
 			);
 			path = DivisionQuestion;
+			sourceTree = "<group>";
+		};
+		24353EFD26969C71008C9880 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				24353EDB269657C5008C9880 /* BaseQuestion */,
+				24353EEB2696920A008C9880 /* SubtractionQuestion */,
+				24353EF3269696A1008C9880 /* AdditionQuestion */,
+				24353EF82696978C008C9880 /* MultiplicationQuestion */,
+				24353EFC269697CA008C9880 /* DivisionQuestion */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
