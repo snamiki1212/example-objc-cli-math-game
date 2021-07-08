@@ -1,6 +1,9 @@
 ## Overview
 
-https://user-images.githubusercontent.com/26793088/124836229-78ee2380-df37-11eb-93c0-d6191ef29683.mov
+https://user-images.githubusercontent.com/26793088/124853714-33dbe880-df5b-11eb-95e1-982ecf425457.mov
+
+
+## Tech stacks
 
 - Objective-C
 
