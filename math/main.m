@@ -10,6 +10,7 @@
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
+#import "QuestionFactory.h"
 
 const int NUMBER_OF_QUESTION = 3;
 
@@ -19,10 +20,11 @@ int main(int argc, const char * argv[]) {
         
         ScoreKeeper *sc = [[ScoreKeeper alloc] init];
         QuestionManager *qm = [[QuestionManager alloc] init];
+        QuestionFactory *qf = [[QuestionFactory alloc] init];
         
         while([sc total] < NUMBER_OF_QUESTION){
             // create model
-            Question *question = [[Question alloc] init];
+            Question *question = [qf generateRandomQuestion];
             NSLog(@"%@\n", question.question);
             
             // append to list
