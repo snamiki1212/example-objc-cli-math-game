@@ -6,16 +6,16 @@
 //
 
 #import "QuestionFactory.h"
-#import "Question.h"
+#import "BaseQuestion.h"
 
 @implementation QuestionFactory
 
-- (Question *) generateRandomQuestion {
+- (BaseQuestion *) generateRandomQuestion {
     NSArray *classNameList = @[
         @"AdditionQuestion",
         @"SubtractionQuestion",
-//        @"MultiplicationQuestion",
-//        @"DivisionQuestion",
+        @"MultiplicationQuestion",
+        @"DivisionQuestion",
     ];
     NSUInteger len = [classNameList count];
     int randomIndex = arc4random_uniform((unsigned int) len);

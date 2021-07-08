@@ -6,13 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Question.h"
+#import "BaseQuestion.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
 #import "QuestionFactory.h"
 
-const int NUMBER_OF_QUESTION = 3;
+const int NUMBER_OF_QUESTION = 10;
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -24,7 +24,7 @@ int main(int argc, const char * argv[]) {
         
         while([sc total] < NUMBER_OF_QUESTION){
             // create model
-            Question *question = [qf generateRandomQuestion];
+            BaseQuestion *question = [qf generateRandomQuestion];
             NSLog(@"%@\n", question.question);
             
             // append to list

@@ -1,5 +1,5 @@
 //
-//  QuestionFactory.h
+//  SubtractionQuestion.h
 //  math
 //
 //  Created by shunnamiki on 2021/07/07.
@@ -10,8 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface QuestionFactory : NSObject
-- (BaseQuestion *) generateRandomQuestion;
+@interface SubtractionQuestion : BaseQuestion
 @end
 
 NS_ASSUME_NONNULL_END

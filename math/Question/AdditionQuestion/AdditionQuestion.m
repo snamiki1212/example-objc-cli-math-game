@@ -17,6 +17,6 @@
 
 - (void) generateQuestion {
     self.question = [[NSString alloc] initWithFormat: @"%ld + %ld = ?", self.leftValue, self.rightValue];
-    self.answer = self.leftValue - self.rightValue;
+    self.answer = self.leftValue + self.rightValue;
 }
 @end
