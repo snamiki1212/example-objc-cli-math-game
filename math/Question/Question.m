@@ -13,11 +13,8 @@
 {
     self = [super init];
     if (self) {
-        //
-        NSInteger elem1 = arc4random_uniform(100);
-        NSInteger elem2 = arc4random_uniform(100);
-        self.question = [[NSString alloc] initWithFormat: @"%ld + %ld = ?", (long)elem1, elem2];
-        self.answer = elem1 + elem2;
+        self.rightValue = arc4random_uniform(100);
+        self.leftValue = arc4random_uniform(100);
         self.startTime = [NSDate date];
     }
     return self;
